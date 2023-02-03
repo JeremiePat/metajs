@@ -1,0 +1,23 @@
+{
+  "name": "metajs",
+  "version": "0.0.0",
+  "description": "A set of tools to make your moderne JS life better.",
+  "main": "main.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremiePat/metajs.git"
+  },
+  "author": "Jérémie Patonnier <jeremie.patonnier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeremiePat/metajs/issues"
+  },
+  "homepage": "https://github.com/JeremiePat/metajs#readme"
+}
