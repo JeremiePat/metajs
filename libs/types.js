@@ -206,6 +206,21 @@ export const Dictionary = { [Symbol.hasInstance]: (value) => (
 )}
 
 /**
+ * Check if an object is a basic key/value holder
+ * 
+ * Basically it's any basic Object (build with `{}` or `new Object()`) 
+ * or null prototype object (build with `Object.create(null)`).
+ */
+export const Record = { [Symbol.hasInstance]: (value) => {
+  if (value !== null && typeof value === 'object') { 
+    const proto = Object.getPrototypeOf(value)
+    return (proto === Object.prototype || proto === null)
+  }
+
+  return false
+}}
+
+/**
  * Check if an Object provide the Iterator requirements
  * 
  * The TC39 is working on defining an Iterator interface to formalize ECMAScript

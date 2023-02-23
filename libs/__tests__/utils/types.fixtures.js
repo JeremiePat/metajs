@@ -86,11 +86,13 @@ const BASE_VALUES = {
   objects_004:   { title: '                           {a: 1}', value: {a: 1} },
   objects_005:   { title: '              Object.create(null)', value: Object.create(null) },
   objects_006:   { title: '                    { next() {} }', value: { next() {} } },
-  objects_007:   { title: '             (function * () {})()', value: (function * () {})() },
-  objects_008:   { title: '         {*[Symbol.iterator](){}}', value: {*[Symbol.iterator](){} } },
-  objects_009:   { title: '     {[Symbol.iterator]:()=>Iter}', value: {[Symbol.iterator]:()=>({next(){}}) } },
-  objects_010:   { title: '     {[Symbol.iterator]:()=>void}', value: {[Symbol.iterator](){} } },
-
+  objects_007:   { title: '         {*[Symbol.iterator](){}}', value: {*[Symbol.iterator](){} } },
+  objects_008:   { title: '     {[Symbol.iterator]:()=>Iter}', value: {[Symbol.iterator]:()=>({next(){}}) } },
+  objects_009:   { title: '     {[Symbol.iterator]:()=>void}', value: {[Symbol.iterator](){} } },
+  
+  // Generator
+  generators_001:{ title: '             (function * () {})()', value: (function * () {})() },
+  
   // Set
   sets_001:      { title: '                        new Set()', value: new Set() },
   sets_002:      { title: '                      new Set([])', value: new Set([]) },

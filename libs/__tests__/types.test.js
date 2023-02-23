@@ -21,12 +21,13 @@ const TEST_SUITES = {
     'numbers_inf',       'numbers_00[1-9]',  'numbers_0[1-9][0-9]',
     'strings_00[123]',   'booleans_001',     'symbol', 
     'bigints_00[1-9]',   'functions',        'arrays', 
-    'objects',           'sets',             'maps',
+    'objects',           'generators',       'sets',
+    'maps',
   ],
   Empty: [
     'nullish',           'numbers_nan',      'numbers_000',
     'strings_000',       'booleans_000',     'bigints_000',
-    'arrays_00[12]',     'objects_00[1589]', 'objects_010',
+    'arrays_00[12]',     'objects_00[15789]', 'objects_010',
     'sets_00[12]',       'maps_00[12]',
   ],
   Numeric: [
@@ -71,12 +72,15 @@ const TEST_SUITES = {
   Dictionary: [
     'objects_005'
   ],
+  Record: [
+    'object'
+  ],
   Iterator: [
-    'objects_00[67]'
+    'generators', 'objects_006'
   ],
   Iterable: [
-    'strings', 'arrays', 'objects_00[789]', 'sets', 'maps'
-  ]
+    'strings', 'arrays', 'objects_00[78]', 'generators', 'sets', 'maps'
+  ],
 }
 
 
