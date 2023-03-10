@@ -11,24 +11,26 @@ const TEST_SUITES = {
     'nullish',
   ],
   Primitive: [
-    'numbers', 'strings', 'booleans', 'symbols', 'bigints',
+    'numbers_(?!obj)', 'strings_(?!obj)', 'booleans_(?!obj)', 'symbols', 'bigints',
   ],
   Falsy: [
-    'nullish',           'numbers_nan',      'numbers_000', 
-    'strings_000',       'booleans_000',     'bigints_000',
+    'nullish',             'numbers_nan',       'numbers_000',
+    'strings_000',         'booleans_000',      'bigints_000',
   ],
   Truthy: [
-    'numbers_inf',       'numbers_00[1-9]',  'numbers_0[1-9][0-9]',
-    'strings_00[123]',   'booleans_001',     'symbol', 
-    'bigints_00[1-9]',   'functions',        'arrays', 
-    'objects',           'generators',       'sets',
-    'maps',
+    'numbers_(?!nan|000)', 'strings_(?!000)',   'booleans_(?!000)',
+    'bigints_(?!000)',     'symbol',            'functions',
+    'arrays', 'objects', 'generators', 'sets', 'maps', 'errors', 'dates',
+    'regexp', 'typed', 'buffers', 'weakrefs', 'promise', 'misc'
   ],
   Empty: [
-    'nullish',           'numbers_nan',      'numbers_000',
-    'strings_000',       'booleans_000',     'bigints_000',
-    'arrays_00[12]',     'objects_00[15789]', 'objects_010',
-    'sets_00[12]',       'maps_00[12]',
+    'nullish',             'numbers_nan',       'numbers_obj',
+    'numbers_000',         'strings_obj0',      'strings_000',
+    'booleans_obj',        'booleans_000',      'bigints_000',
+    'arrays_00[12]',       'objects_00[15789]', 'objects_010',
+    '^sets_00[12]',        '^maps_00[12]',      'typed_..[12]',
+    'errors', 'dates', 'regexp', 'weakmap', 'weakset', 'buffers',
+    'weakrefs', 'promise', 'misc'
   ],
   Numeric: [
     'numbers_\\d+',      'strings_00[23]',
@@ -79,7 +81,7 @@ const TEST_SUITES = {
     'generators', 'objects_006'
   ],
   Iterable: [
-    'strings', 'arrays', 'objects_00[78]', 'generators', 'sets', 'maps'
+    'strings', 'arrays', 'objects_00[78]', 'generators', '^sets', '^maps', 'typed'
   ],
 }
 
